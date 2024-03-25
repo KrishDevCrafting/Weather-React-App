@@ -1,0 +1,14 @@
+.navbar{
+    background: #000;
+    color: #ffff;
+    display: flex;
+    
+    
+    justify-content: space-around;
+}
+li{list-style: none;
+    
+}
+#Forecast{
+    margin-right: auto;
+}

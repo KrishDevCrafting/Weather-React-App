@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+  border: 2px solid;
+  
+  
+  grid-auto-rows: minmax(200px,auto);
+  /* grid-template-columns: 1fr 1fr 1fr; */
+}
+.box1 {
+  width: 30em;
+  margin: 20px;
+ 
+ 
+  grid-column: 1/2;
+  border: 1px solid red;
+}
+
+.box2 {
+  width: 35rem;
+  margin: 20px;
+  border: 1px solid;
+}
