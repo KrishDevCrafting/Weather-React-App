@@ -1,14 +1,16 @@
-.navbar{
-    background: #000;
-    color: #ffff;
-    display: flex;
-    
-    
-    justify-content: space-around;
+.navbar {
+  background: #000;
+  color: #ffff;
+  display: flex;
+
+  justify-content: space-around;
 }
-li{list-style: none;
-    
+li {
+  list-style: none;
 }
-#Forecast{
-    margin-right: auto;
+#Forecast {
+  margin-right: auto;
+}
+#btn {
+  padding: 15px 5px 5px 10px;
 }
