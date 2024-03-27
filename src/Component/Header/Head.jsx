@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../style/header.css";
 import axios from "axios";
 const Head = () => {
-  const [datasearch, setdatasearch] = React.useState("");
+  const [datasearch, setdatasearch] = React.useState([]);
+  
 
+
+useEffect(()=>{
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}"
+        "http://localhost:7000/Weather"
       );
+      
       setdatasearch(response.data);
     } catch (error) {
       console.log("Error fetching weather data:", error);
     }
-  };
+  }
+  handleSearch()
+},[]);
+
+
 
   return (
     <>
@@ -52,9 +60,14 @@ const Head = () => {
             </ul>
           </div>
           <div id="btn">
-            <button onClick={handleSearch}>Save</button>
+            <button onClick={}>Save</button>
           </div>
         </section>
+      </div>
+      <div>
+        <h1>{datasearch.map((e,index)=>(
+          <li key={index}>{e.Country}</li>
+        ))}</h1>
       </div>
     </>
   );

@@ -1,0 +1,22 @@
+{
+
+    "Weather":[
+        {
+            "Temperature": "30C",
+            "Humidity": "20%",
+            "Country": "New-Delhi"
+
+        },
+        {
+        "Temperature": "18",
+        "Humidity": "50%",
+        "Country": "Mumbai"},
+        {
+            
+            "temperature": "30C",
+            "Humidity": "40%",
+            "Country": "Uttarakhand"
+        }
+    ]
+
+}
