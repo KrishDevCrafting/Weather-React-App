@@ -1,0 +1,29 @@
+{
+  "AnimeCharaters": [
+    {
+      "Name": "Light yami",
+      "Power": "Date Note",
+      "Ability": "Think Fast"
+    },
+    {
+      "Name": "Itachi",
+      "Power": "Mangekyō Sharingan",
+      "Ability": "Sacrifice for peace"
+    },
+    {
+      "Name": "Aizen-Sosuke",
+      "Power": "Weapon summoning",
+      "Ability": "hypnosis"
+    },
+    {
+      "Name": "Luffy",
+      "Power": "Devil Fruit",
+      "Ability": "Elastic"
+    },
+    {
+      "Name": "Goku",
+      "Power": "kamehameha",
+      "Ability": "Super Saiyan"
+    }
+  ]
+}

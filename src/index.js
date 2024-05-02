@@ -1,15 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import Fire from "./Components/Chanamera";
+// import App from './App';
+// import Head from "./Components/Header/Head";
 
-//import App from './App';
-import { Main } from "./Component/MainHome";
-import Head from "./Component/Header/Head";
+
+//import Head from "./Component/Header/Head";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Head/>
-   
+   <Fire/>
+ {/* <Head/> 
+<App/>     */}
+ 
   </React.StrictMode>
 );
 
