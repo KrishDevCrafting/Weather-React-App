@@ -1,3 +1,19 @@
+🚀 Project Status: Under Active Development 🛠️
+
+Thank you for visiting! This project is currently in an exciting phase of development, where new features are being added, optimizations are being made, and bugs are being fixed. Your interest and feedback are highly valued and appreciated.
+
+What's Happening?
+
+🌱 New features are being conceptualized and implemented.
+🛠️ Existing functionalities are being refined and enhanced.
+🐞 Bugs are being diligently hunted down and squashed.
+How Can You Contribute?
+
+💡 Share your ideas and suggestions by opening issues.
+🐛 Report any bugs you encounter.
+📦 Test new features and provide feedback.
+⭐️ Star this repository to show your support.
+Stay tuned for more updates as we continue to improve and evolve this project!
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
