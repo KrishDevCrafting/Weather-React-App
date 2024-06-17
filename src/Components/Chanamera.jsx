@@ -1,25 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+
 const Fire = () => {
-  //const BASE_URL = "http://localhost:7000/AnimeCharaters";
-  const a =
-    "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=7b77f2dc3b987876e7b615e5cf8dec71";
-  const [useLocation, setlocation] = React.useState([]);
-  const [data, setdata] = React.useState("");
+  const apiKey = "7b77f2dc3b987876e7b615e5cf8dec71"; // Replace with your OpenWeatherMap API key
+  const cityId = "delhi"; // Example city ID (Moscow), replace with your desired city ID
+  const apiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${cityId}&appid=${apiKey}`;
+
+  const [locationData, setLocationData] = useState([]);
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
-    const fetchWithPromise = async () => {
-      const { data } = await axios.get(a);
-      setlocation(data);
-      //   const data = await response.json();
-      //   setlocation(data);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(apiUrl);
+        setLocationData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
-    fetchWithPromise();
-  }, []);
+    fetchData();
+  }, [apiUrl]);
 
-  const Input = (e) => {
-    setdata(e.target.value);
+  //const timeZone = JSON.timeZone;
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
   };
 
   return (
@@ -27,29 +33,30 @@ const Fire = () => {
       <div>
         <input
           placeholder="Enter the Value"
-          onChange={Input}
-          type="text
-    "
+          onChange={handleInputChange}
+          type="text"
+          value={inputValue}
         />
       </div>
 
+      <div className="text-center">
+        {/* {Array.isArray(locationData.list) &&
+          locationData.list.map((item, index) => <h1> {item.sys}</h1>)} */}
+        {/* <h1>{JSON.stringify(locationData.main.temp)}</h1> */}
+      </div>
       <div>
         <table className="table border bg-dark text-white">
-          <tr>
-            {useLocation.map((e) => (
-              <td>{e.Name}</td>
-            ))}
-          </tr>
-          <tr>
-            {useLocation.map((e) => (
-              <td>{e.Power}</td>
-            ))}
-          </tr>
-          <tr>
-            {useLocation.map((e) => (
-              <td>{e.Ability}</td>
-            ))}
-          </tr>
+          <tbody>
+            {Array.isArray(locationData.list) &&
+              locationData.list.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.weather[0].id}</td>
+                  <td>{item.sys.id}</td>
+                  <td>{item.weather[0].description}</td>
+                  <td>{item.main.temp}</td>
+                </tr>
+              ))}
+          </tbody>
         </table>
       </div>
     </>
